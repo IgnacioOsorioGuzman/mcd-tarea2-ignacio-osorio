@@ -1,3 +1,5 @@
+# Ignacio Andrés Osorio Guzmán
+
 # MiniChat
 
 Aplicación de chat mínima con arquitectura **MVC + Observer**, usada en la

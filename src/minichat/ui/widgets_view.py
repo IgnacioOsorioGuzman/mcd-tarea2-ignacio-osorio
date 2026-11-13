@@ -169,7 +169,7 @@ class WidgetsView(Observer):
             self._set_status(f"Error: {payload.get('error', '')}")
         elif event == Event.EXPORT_DONE:
             self._set_status(f"Exported: {payload.get('path', '')}")
-        elif event in {Event.MESSAGES_UPDATED, "config_changed"}:
+        elif event in {Event.MESSAGES_UPDATED, Event.CONFIG_CHANGED}:
             # Re-render after any session/config changes.
             self._render()
             # Set a neutral status (avoid showing export text by mistake).

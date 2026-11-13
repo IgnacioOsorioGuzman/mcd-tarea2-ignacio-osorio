@@ -20,13 +20,13 @@ class ChatController(Observable):
     """Coordinates the conversation between session and backend.
 
     Emits the following observable events:
-        - "config_changed": after updating GenerationConfig
-        - "generating_start": before calling the backend
-        - "generating_done": after a reply (payload: {"reply": str})
-        - "generating_error": on backend exception
+        - CONFIG_CHANGED: after updating GenerationConfig
+        - GENERATING_START: before calling the backend
+        - GENERATING_DONE: after a reply (payload: {"reply": str})
+        - GENERATING_ERROR: on backend exception
           (payload: {"error": str})
-        - "messages_updated": after session mutations
-        - "export_done": after exporting JSON (payload: {"path": str})
+        - MESSAGES_UPDATED: after session mutations
+        - EXPORT_DONE: after exporting JSON (payload: {"path": str})
     """
 
     def __init__(
